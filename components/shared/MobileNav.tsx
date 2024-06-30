@@ -1,11 +1,4 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import { Separator } from "../ui/separator";
 import NavItems from "./NavItems";
@@ -16,9 +9,9 @@ const MobileNav = () => {
         <SheetTrigger className="align-middle">
           <Image
             src="/assets/icons/menu.svg"
+            alt="menu"
             width={24}
             height={24}
-            alt="menu"
             className="cursor-pointer"
           />
         </SheetTrigger>
