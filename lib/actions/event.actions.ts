@@ -18,7 +18,7 @@ import {
 } from "@/types";
 
 const getCategoryByName = async (name: string) => {
-  return Category.findOne({ name: { $regex: name, $options: "i" } });
+  return Category.findOne({ name: name });
 };
 
 const populateEvent = (query: any) => {
@@ -118,6 +118,7 @@ export async function getAllEvents({
     const categoryCondition = category
       ? await getCategoryByName(category)
       : null;
+    
     const conditions = {
       $and: [
         titleCondition,
